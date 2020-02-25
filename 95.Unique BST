@@ -1,0 +1,4 @@
+given number n,how many BST exist?
+C_n+1 = ΣCi*Cn-i
+Catalan number
+
