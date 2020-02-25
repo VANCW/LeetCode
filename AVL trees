@@ -1,0 +1,75 @@
+CBT
+
+AVL tree is BST
+balanced tree
+
+
+review: operation of BST
+search deletion insertion
+all takes O(height_of_the_tree)
+
+skew tree??
+
+adelson_velskii_landis tree 1962
+[definition] height balanced of a binary tree
+1.
+
+[definition] BF
+BF = hl-hr
+
+[question] how to rearrange the tree to be balanced?
+  1. RR rotation & LL rotation 
+  notice that before trouble maker appears, the BST is supposed to be an height-balanced tree.
+  
+  2.LR   & RL
+   why it is called LR or RL? root from trouble finder->trouble maker
+      what is the maximum of the depth difference between trouble finder and trouble maker?
+   two situations of LR
+    (where to put the trouble maker?)
+    (what is the distance between trouble maker and trouble finder?)
+   why it is called double rotation?(try yourself)
+   
+   ways to keep AVL tree:
+   1. using BF
+   2. keep a height field
+   
+  try to prove h = O(ln n)
+      consider h be the greatest->fix h,n_h be the smallest number of nodes given height h.
+      we have n_h = n_h-1 + n_h-2 + 1.(n_0=0,n_1=1,n_2=2)
+      it quite resembles fibonacci numbers.
+      using MI, we have n_h = F_h+2 - 1 (pls refer to DM)
+      since we know F_i is an exponantial expression on i, we get h = O(ln n)
+      
+      identify these terms(in BST):
+      1. tree height
+      2. operations(deletion,insertion) all linked with tree height but not number of nodes, O(T_height)
+      3. AVL trees ensures h = O(log n),thus make tree operation O(log n)
+  
+  
+  Splay trees
+  1. target
+    make M conseutive tree operation from an empty tree to be O(MlogN)
+    what does amortized time means?
+    
+    is AVL tree splay tree?why?
+    
+  does single rotation works for every node visited? what's the worst case?
+  
+  how to use double rotation?
+  X P G
+  if P is the root->simple
+  1. zig-zag situation
+  2. zig-zig situation
+  all cause double rotation
+  
+  pls practice single rotation
+  
+  deletions on splay trees
+    
+  Amortized analysis
+  amortized bound does not involve probability
+  what's the difference between amortized bound and average case-bound?
+  
+  aggregate analysis
+  accounting method
+    credit = amortized cost - actual cost
